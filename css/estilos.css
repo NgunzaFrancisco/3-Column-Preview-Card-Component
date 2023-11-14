@@ -1,0 +1,94 @@
+body{
+	display: flex;
+	justify-content: center;
+}
+
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Estilização do content  */
+.content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/*margin-top: 2em;*/
+	width: 85%;
+	color: #fff;
+	margin: 3em 0;
+}
+
+/* Estilizaçao geral dos card*/
+.content__card{
+	padding:  3em;
+}
+.content__card h1{
+	font-size: 2em;
+	margin-top: 1em;
+	font-weight: 600;
+}
+.content__card img,
+.content__card h1,
+.content__card p,
+.content__card a{
+	margin-bottom: 1em;
+}
+
+.content__card p{
+	line-height: 1.3em;
+}
+
+.content__card a{
+	border-radius: 20px;
+	background-color: #fff;
+	padding: 1em 1.5em;
+	box-sizing: content-box;
+	margin-top: 1em;
+	display: inline-block;
+}
+.content__card a:hover{
+	color: #fff;
+	background-color: transparent;
+	border: 1px solid #fff;
+}
+
+/* SEDAN */
+.content__card--sedan{
+	background-color: hsl(31, 77%, 52%);
+	border-radius: 10px 10px 0 0;
+}
+.content__card--sedan a{
+	color: hsl(31, 77%, 52%);
+}
+
+/* SUV */
+.content__card--suv{
+	background-color: hsl(184, 100%, 22%);
+}
+.content__card--suv a{
+	color: hsl(184, 100%, 22%);	
+}
+
+/* LUXURY */
+.content__card--luxury{
+	background-color: hsl(179, 100%, 13%);
+	border-radius: 0 0 10px 10px;
+}
+.content__card--luxury a{
+	color: hsl(179, 100%, 13%);
+}
+
+/* Responsividade */
+@media (min-width:1200px){
+	.content{
+		flex-direction: row;
+	}
+	.content__card--sedan{
+		border-radius: 10px 0 0 10px;
+	}
+	.content__card--luxury{
+		border-radius: 0 10px 10px 0;
+	}	
+}
